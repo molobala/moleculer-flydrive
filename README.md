@@ -12,7 +12,7 @@ Fluent storage manager service with [Node Flydrive](https://github.com/Slynova-O
 - Possibility to register a custome driver like [Google Drive driver](https://github.com/molobala/flydrive-google-drive)
 
 ## Usage
-** With no settings (it will mount local storage driver by default with the current directory as root dir)
+**With no settings (it will mount local storage driver by default with the current directory** as root dir)
 ```js
 "use strict"
 const FlyDrive = require("moleculer-flydrive");
@@ -32,7 +32,7 @@ broker.createService(FlyDrive(),{
 })
 
 ```
-** With settings
+**With settings**
 ```js
 "use strict"
 const FlyDrive = require("moleculer-flydrive");
@@ -41,8 +41,8 @@ const broker = new ServiceBroker();
 //when true passed as param the service will try to create the root dir
 broker.createService(FlyDrive(true),{
 	settings:{
+		STORAGE_ROOT:"<a path>",
 		storageConfig:{
-			STORAGE_ROOT:"<a path>",
 			default: "local",
 			disks:{
 				local:{
@@ -78,7 +78,7 @@ broker.createService(FlyDrive(true),{
 	}
 })
 ```
-** Register a custom drive
+**Register a custom drive**
 
 ```js
 "use strict"
@@ -89,9 +89,9 @@ const broker = new ServiceBroker();
 //when true passed as param the service will try to create the root dir
 broker.createService(FlyDrive(true),{
 	settings:{
+		STORAGE_ROOT:"<a path>",
+		defaultStorage: "local",
 		storageConfig:{
-			STORAGE_ROOT:"<a path>",
-			default: "local",
 			disks:{
 				local:{
 					driver: "local"
@@ -129,3 +129,17 @@ broker.createService(FlyDrive(true),{
 	}
 })
 ```
+
+## Settings
+| Property | Type | Description |
+| -------- | -----| ----------- |
+| `STORAGE_ROOT` | `String` | The root directory for local storage driver|
+| `defaultStorage` | `String` | the default driver to use, if not sepecified, `local` will be used  |
+| `storageConfig` | `Object` | the configuration object, refer to [Configuration object](https://github.com/Slynova-Org/node-flydrive/blob/master/tests/stubs/config.js) for more details |
+
+
+## Methods
+| Name | Params | Result | Description |
+| ---- | ------ | ------ | ----------- |
+| disk | `String or undefined` | [`Storage`](https://github.com/Slynova-Org/node-flydrive/blob/master/src/Storage.js) instance| get a specifique disk storage or the default storage if no param passes. |
+| extends | name:`String`,driver: `Object constructor` | the [`StorageManager`](https://github.com/Slynova-Org/node-flydrive/blob/master/src/StorageManager.js) instance | extends the storage manager, the new driver configuration should have been defined in configuration. Refer to [How to register custome driver](https://github.com/Slynova-Org/node-flydrive/wiki/Register-a-custom-driver) |

@@ -45,7 +45,7 @@ broker.createService(FlyDrive(true),{
 		storageConfig:{
 			default: "local",
 			disks:{
-				local:{
+				local: {
 					driver: "local"
 				},
 				s3: {
@@ -53,7 +53,7 @@ broker.createService(FlyDrive(true),{
 		      key: 'AWS_S3_KEY',
 		      secret: 'AWS_S3_SECRET',
 		      region: 'AWS_S3_REGION',
-		      bucket: 'AWS_S3_BUCKET',
+		      bucket: 'AWS_S3_BUCKET'
 		    },
 		    ftp: {
 		      driver: 'ftp',
@@ -61,7 +61,7 @@ broker.createService(FlyDrive(true),{
 		      port: 21,
 		      user: 'FTP_USER',
 		      pass: 'FTP_PASS',
-		      longLive: false,
+		      longLive: false
 		    },
 			}
 		}
@@ -93,7 +93,7 @@ broker.createService(FlyDrive(true),{
 		defaultStorage: "local",
 		storageConfig:{
 			disks:{
-				local:{
+				local: {
 					driver: "local"
 				},
 				s3: {
@@ -101,7 +101,7 @@ broker.createService(FlyDrive(true),{
 		      key: 'AWS_S3_KEY',
 		      secret: 'AWS_S3_SECRET',
 		      region: 'AWS_S3_REGION',
-		      bucket: 'AWS_S3_BUCKET',
+		      bucket: 'AWS_S3_BUCKET'
 		    },
 		    ftp: {
 		      driver: 'ftp',
@@ -109,10 +109,10 @@ broker.createService(FlyDrive(true),{
 		      port: 21,
 		      user: 'FTP_USER',
 		      pass: 'FTP_PASS',
-		      longLive: false,
+		      longLive: false
 		    },
 		    //register the driver configuration
-		    "drive": {
+		    drive: {
 		    	driver: "drive",
 		    	clientId: "GOOGLE_DRIVE_CLIENT_ID",
 	        clientSecret: "GOOGLE_DRIVE_CLIENT_SECRET",

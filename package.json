@@ -9,12 +9,14 @@
   "keywords": ["moleculer","flydrive", "file", "filesystem"],
   "author": "Doumbia Mahamadou <doumbiamahamadou.ensate@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@slynova/flydrive": "^0.2.0"
+  },
   "devDependencies": {
     "eslint": "^4.18.2",
     "jest": "^22.4.2",
     "jest-cli": "^22.4.2",
     "moleculer-repl": "^0.4.0",
-    "moleculer": "^0.12.3",
-    "@slynova/flydrive": "^0.2.0"
+    "moleculer": "^0.12.3"
   }
 }

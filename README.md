@@ -10,7 +10,8 @@ Fluent storage manager service with [Node Flydrive](https://github.com/Slynova-O
 - Digital Ocean Spaces (You need to install aws-sdk package to be able to use this driver)
 - FTP (You need to install jsftp package to be able to use this driver)
 - Possibility to register a custome driver like [Google Drive driver](https://github.com/molobala/flydrive-google-drive)
-
+## Instalation
+`npm install moleculer-flydrive`
 ## Usage
 **With no settings (it will mount local storage driver by default with the current directory** as root dir)
 ```js
@@ -143,3 +144,9 @@ broker.createService(FlyDrive(true),{
 | ---- | ------ | ------ | ----------- |
 | disk | `String or undefined` | [`Storage`](https://github.com/Slynova-Org/node-flydrive/blob/master/src/Storage.js) instance| get a specifique disk storage or the default storage if no param passes. |
 | extends | name:`String`,driver: `Object constructor` | the [`StorageManager`](https://github.com/Slynova-Org/node-flydrive/blob/master/src/StorageManager.js) instance | extends the storage manager, the new driver configuration should have been defined in configuration. Refer to [How to register custome driver](https://github.com/Slynova-Org/node-flydrive/wiki/Register-a-custom-driver) |
+
+## Test
+You can run `npm run test` to run tests
+
+## Licence
+**MIT**

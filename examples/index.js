@@ -35,8 +35,7 @@ broker.start().then(async () => {
 
   // Call action
   let exist = await broker.call("flydrive.exists", {
-    filename:"some-file.txt",
-    fileContent: "A content"
+    filename:"some-file.txt"
   });
   console.log(exist);
   if(!exist){

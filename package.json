@@ -1,18 +1,21 @@
 {
   "name": "moleculer-flydrive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An addon based in @slynova/flydrive for moleculer for storage managment",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
   },
-  "keywords": ["moleculer","flydrive", "file", "filesystem"],
+  "keywords": [
+    "moleculer",
+    "flydrive",
+    "file",
+    "filesystem"
+  ],
   "author": "Doumbia Mahamadou <doumbiamahamadou.ensate@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@slynova/flydrive": "^0.2.0"
-  },
   "devDependencies": {
+    "@slynova/flydrive": "^0.3.0",
     "eslint": "^4.18.2",
     "jest": "^22.4.2",
     "jest-cli": "^22.4.2",

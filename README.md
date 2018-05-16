@@ -2,7 +2,8 @@
 
 # moleculer-flydrive
 
-Fluent storage manager service with [Node Flydrive](https://github.com/Slynova-Org/node-flydrive).
+Fluent storage manager service with [Node Flydrive](https://github.com/Slynova-Org/node-flydrive).  
+You need to install `@slynova/node-flydrive`
 
 ## Features
 - Local
